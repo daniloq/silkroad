@@ -2,4 +2,85 @@
 title: Silkroad
 ---
 
-<h1>Silkroad</h1>
+<%= partial "nav" %>
+
+<section class="sr-banner">
+  <div class="sr-banner__background">
+    <div class="sr-logo">
+      <img class="sr-logo__image" src="images/logo.png"/>
+    </div>
+  </div>
+  <div class="sr-banner__info">
+    <h1>Accenture</h1>
+    <p>High performance. Delivered</p>
+  </div>
+</section>
+
+<section class="sr-search">
+  <div class="sr-search__container">
+    <div class="sr-form__field sr-form__field--with-icon">
+      <input class="sr-form__field-input" type="text" placeholder="Search" />
+      <i class="material-icons">search</i>
+    </div>
+    <div class="sr-filter">
+      <button class="sr-button sr-button--with-icon sr-button--just-text">
+        Countries
+        <i class="material-icons sr-button__icon">arrow_drop_down</i>
+      </button>
+      <span class="sr-filter__divider"></span>
+      <button class="sr-button sr-button--with-icon sr-button--just-text">
+        Cities
+        <i class="material-icons sr-button__icon">arrow_drop_down</i>
+      </button>
+      <span class="sr-filter__divider"></span>
+      <button class="sr-button sr-button--with-icon sr-button--just-text">
+        Departments
+        <i class="material-icons sr-button__icon">arrow_drop_down</i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="sr-search__container">
+  <h2>Design</h2>
+  <div class="sr-panel">
+    <div>
+      <a class="sr-panel__title" href="">Senior Product Designer</a>
+    </div>
+    <div>
+      <span class="sr-panel__meta">Jacksonville, FL</span>
+    </div>
+  </div>
+  <div class="sr-panel">
+    <div>
+      <a class="sr-panel__title" href="">Product Designer</a>
+    </div>
+    <div>
+      <span class="sr-panel__meta" >San Franciso, CA</span>
+    </div>
+  </div>
+</section>
+
+<section class="sr-search__container">
+  <h2>Development</h2>
+  <div class="sr-panel">
+    <div>
+      <a class="sr-panel__title" href="">Front End Engineer</a>
+    </div>
+    <div>
+      <span class="sr-panel__meta">Jacksonville, FL</span>
+    </div>
+  </div>
+  <div class="sr-panel">
+    <div>
+      <a class="sr-panel__title" href="">Software Engineer</a>
+    </div>
+    <div>
+      <span class="sr-panel__meta" >San Franciso, CA</span>
+    </div>
+  </div>
+</section>
+
+<section class="sr-search__container">
+  <%= partial "pagination" %>
+</section>
