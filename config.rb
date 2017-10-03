@@ -13,8 +13,6 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-set :build_dir, 'tmp'
-
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -38,6 +36,14 @@ set :build_dir, 'tmp'
 #     'Helping'
 #   end
 # end
+
+set :build_dir, 'tmp'
+
+set :css_dir, 'stylesheets'
+
+set :js_dir, 'javascripts'
+
+set :images_dir, 'images'
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
