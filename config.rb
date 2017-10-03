@@ -13,8 +13,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# Use “pretty” URLs (without the `.html` suffix)
-activate :directory_indexes
+# Use relative URLs
+activate :relative_assets
 
 # Append hashes to compiled assets
 activate :asset_hash
