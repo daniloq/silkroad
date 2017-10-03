@@ -48,7 +48,8 @@ set :images_dir, 'images'
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
+configure :build do
 #   activate :minify_css
 #   activate :minify_javascript
-# end
+activate :relative_assets
+end
