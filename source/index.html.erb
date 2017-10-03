@@ -17,70 +17,157 @@ title: Silkroad
 </section>
 
 <section class="sr-search">
-  <div class="sr-search__container">
+  <div class="sr-wrapper sr-wrapper--medium">
     <div class="sr-form__field sr-form__field--with-icon">
       <input class="sr-form__input" type="text" placeholder="Search" />
       <i class="material-icons">search</i>
     </div>
-    <div class="sr-filter">
-      <button class="sr-button sr-button--with-icon sr-button--just-text">
-        Countries
-        <i class="material-icons sr-button__icon">arrow_drop_down</i>
-      </button>
+    <div class="sr-filter sr-filter--desktop">
+      <div class="sr-select">
+        <select>
+          <option>Countries</option>
+          <option>Canada</option>
+        	<option>Mexico</option>
+        	<option>United Kingdom</option>
+        	<option>Unites States</option>
+        </select>
+        <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
+      </div>
       <span class="sr-filter__divider"></span>
-      <button class="sr-button sr-button--with-icon sr-button--just-text">
-        Cities
-        <i class="material-icons sr-button__icon">arrow_drop_down</i>
-      </button>
+      <div class="sr-select">
+        <select>
+          <option>Cities</option>
+          <option>Denver, CO</option>
+          <option>Jacksonville, FL</option>
+          <option>San Francisco, CA</option>
+        </select>
+        <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
+      </div>
       <span class="sr-filter__divider"></span>
-      <button class="sr-button sr-button--with-icon sr-button--just-text">
-        Departments
+      <div class="sr-select">
+        <select>
+          <option>Departments</option>
+          <option>Design</option>
+          <option>Development</option>
+          <option>Product</option>
+        </select>
+        <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
+      </div>
+    </div>
+    <div class="sr-filter sr-filter--mobile">
+      <button id="modal__button" class="sr-button sr-button--with-icon sr-button--just-text">
+        Filters
         <i class="material-icons sr-button__icon">arrow_drop_down</i>
       </button>
     </div>
   </div>
 </section>
 
-<section class="sr-search__container">
-  <h2>Design</h2>
-  <div class="sr-panel">
-    <div>
-      <a class="sr-panel__title" href="/job-detail.html">Senior Product Designer</a>
-    </div>
-    <div>
-      <span class="sr-panel__meta">Jacksonville, FL</span>
-    </div>
-  </div>
-  <div class="sr-panel">
-    <div>
-      <a class="sr-panel__title" href="">Product Designer</a>
-    </div>
-    <div>
-      <span class="sr-panel__meta" >San Franciso, CA</span>
-    </div>
-  </div>
+<section class="sr-wrapper sr-wrapper--medium">
+  <article class="sr-search__section">
+    <h2>Design</h2>
+    <a class="sr-panel" href="/job-detail.html">
+      <div class="sr-panel__title">
+        Senior Product Designer
+      </div>
+      <div>
+        <span class="sr-panel__meta">Jacksonville, FL</span>
+      </div>
+    </a>
+    <a class="sr-panel" href="/job-detail.html">
+      <div class="sr-panel__title">
+        Product Designer
+      </div>
+      <div>
+        <span class="sr-panel__meta">San Francisco, CA</span>
+      </div>
+    </a>
+  </article>
+  <article class="sr-search__section">
+    <h2>Development</h2>
+    <a class="sr-panel" href="/job-detail.html">
+      <div class="sr-panel__title">
+        Front End Engineer
+      </div>
+      <div>
+        <span class="sr-panel__meta">Jacksonville, FL</span>
+      </div>
+    </a>
+    <a class="sr-panel" href="/job-detail.html">
+      <div class="sr-panel__title">
+        Software Engineer
+      </div>
+      <div>
+        <span class="sr-panel__meta">San Francisco, CA</span>
+      </div>
+    </a>
+  </article>
+
+  <article class="sr-search__section">
+    <%= partial "pagination" %>
+  </article>
 </section>
 
-<section class="sr-search__container">
-  <h2>Development</h2>
-  <div class="sr-panel">
-    <div>
-      <a class="sr-panel__title" href="">Front End Engineer</a>
-    </div>
-    <div>
-      <span class="sr-panel__meta">Jacksonville, FL</span>
-    </div>
-  </div>
-  <div class="sr-panel">
-    <div>
-      <a class="sr-panel__title" href="">Software Engineer</a>
-    </div>
-    <div>
-      <span class="sr-panel__meta" >San Franciso, CA</span>
-    </div>
-  </div>
-</section>
+<!-- Filter Mobile Menu Mobile -->
+<div id="myModal" class="modal modal--full-fixed">
 
-<section class="sr-search__container">
-  <%= partial "pagination" %>
-</section>
+  <!-- Modal content -->
+  <div class="modal__content">
+    <div class="modal__header">
+      <h5>Filters</h5>
+      <span class="modal__close"><i class="material-icons">close</i></span>
+    </div>
+    <label class="sr-form__label">Countries</label>
+    <div class="sr-select">
+      <select>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+      </select>
+      <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
+    </div>
+    <label class="sr-form__label">Cities</label>
+    <div class="sr-select">
+      <select>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+      </select>
+      <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
+    </div>
+    <label class="sr-form__label">Departments</label>
+    <div class="sr-select">
+      <select>
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+      </select>
+      <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
+    </div>
+    <button class="sr-button sr-button--large sr-button--primary sr-button--block">Filter Jobs</button>
+  </div>
+
+</div>
+
+<script>
+  // Change color of selected option in filters
+  $("select").change(function() {
+    $(this).css('color','#00B9FF')
+  })
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("modal__button");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("modal__close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+</script>

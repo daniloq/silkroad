@@ -1,19 +1,87 @@
 .sr-nav
   background-color: $blue
   height: 75px
+  position: relative
 
   &__container
-    @include wrapper
     display: flex
     align-items: center
     height: inherit
     justify-content: space-between
 
+  .sr-wrapper
+    padding: 0 20px
+
   &__item
-    color: $white
+    color: rgba(255,255,255,0.8)
     padding-left: 30px
+    &:hover
+      color: $white
 
   // Logo
   .sr-logo
     width: 40px
     height: 40px
+
+.sr-mobile-nav
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: $white
+  z-index: 1
+
+  .sr-nav__item
+    display: block
+    color: $gray
+    padding: 20px
+    border-bottom: 1px solid $light-gray
+    &:hover
+      color: $blue
+
+  &__title
+    color: $dark-gray
+    font-weight: 700
+    padding: 0 20px
+    border-bottom: 1px solid $light-gray
+    height: 75px
+    line-height: 75px
+
+  &__button
+    display: none
+    height: 17px
+    padding: 0
+    transition: all 0.3s ease-in-out
+    position: absolute
+    z-index: 2
+    right: 20px
+    &:hover
+      cursor: pointer
+    &-item
+      background: $white
+      display: block
+      height: 3px
+      margin: 0 0 4px
+      transition: all 0.3s ease-in-out
+      width: 22px
+    &.open
+      z-index: 2
+      .sr-mobile-nav__button-item
+        margin: 0 0 6px
+        background: $gray
+        &:first-child
+          transform: rotate(45deg)
+          transform-origin: 0
+        &:nth-child(2)
+          opacity: 0
+        &:nth-child(3)
+          transform: rotate(-45deg)
+          transform-origin: -4px
+
+@media only screen and (max-width : 600px)
+  .sr-desktop-nav
+    display: none
+
+  .sr-mobile-nav__button
+    display: inline-block

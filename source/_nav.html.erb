@@ -1,12 +1,28 @@
 <header class="sr-nav">
-  <div class="sr-nav__container">
+  <div class="sr-nav__container sr-wrapper">
     <div class="sr-logo">
       <a href="/"><img class="sr-logo__image" src="images/logo.png"/></a>
     </div>
-    <nav>
-      <a class="sr-nav__item" href="">Jobs</a>
-      <a class="sr-nav__item" href="">Team</a>
-      <a class="sr-nav__item"href="">Culture</a>
+    <nav class="sr-desktop-nav">
+      <%= partial "nav-links" %>
     </nav>
+    <div class="sr-mobile-nav__button">
+      <span class="sr-mobile-nav__button-item"></span>
+      <span class="sr-mobile-nav__button-item"></span>
+      <span class="sr-mobile-nav__button-item"></span>
+    </div>
   </div>
 </header>
+
+<div class="sr-mobile-nav" style="display: none">
+  <div class="sr-mobile-nav__title">Menu</div>
+  <%= partial "nav-links" %>
+</div>
+
+<script>
+  $('.sr-mobile-nav__button').click(function(e){
+    e.preventDefault();
+    $('.sr-mobile-nav').slideToggle();
+    $(this).toggleClass('open');
+  });
+</script>

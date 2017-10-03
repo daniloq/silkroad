@@ -1,7 +1,7 @@
 .modal
   display: none
   position: fixed
-  z-index: 1
+  z-index: 3
   padding-top: 100px
   left: 0
   top: 0
@@ -12,11 +12,11 @@
   background-color: rgba(0, 0, 0, 0.4)
 
   &__content
-    background-color: #fefefe
+    background-color: $white
     margin: auto
     padding: 20px
-    border: 1px solid #888
-    width: 80%
+    max-width: 680px
+    border-radius: $border-radius
 
   &__close
     color: #aaaaaa
@@ -27,3 +27,26 @@
       color: #000
       text-decoration: none
       cursor: pointer
+
+  &--full-fixed
+
+    .modal__header
+      display: flex
+      align-items: center
+      border-bottom: 1px solid $light-gray
+      margin: -20px -20px 20px -20px
+      padding: 0 20px
+      justify-content: space-between
+
+    .modal__content
+      border-radius: 0
+      position: absolute
+      width: 100%
+      top: 0
+
+    .sr-select
+      margin:  0 0 20px 0
+      width: 100%
+
+      select
+        width: 100%

@@ -15,6 +15,38 @@
         right: 15px
         top: 12px
 
+    .sr-form__helper
+      display: none
+
+    // Error State
+    &--error
+
+      .sr-form__label
+        color: $red
+
+      .sr-form__input
+        border-color: $red
+
+      .sr-form__helper
+        display: block
+        color: $red
+        margin: 5px 0 0 0
+
+    // Disabled State
+    &--disabled
+
+      .sr-form__label
+        color: lighten($dark-gray, 60%)
+
+      .sr-form__input
+        border-color: $light-gray
+        background-color: $light-gray
+        color: lighten($dark-gray, 60%)
+        cursor: not-allowed
+
+        &:hover, &:focus
+          border-color: $light-gray
+
   &__input
     border-radius: $border-radius
     border: 1px solid $light-gray
@@ -23,6 +55,7 @@
     padding: 0 15px
     position: relative
     width: 100%
+    transition: all .3s
 
     &:hover
       border-color: $gray
@@ -32,6 +65,7 @@
 
   &__label
     display: block
+    margin: 0 0 10px 0
 
   // Placeholder color
   $placeholder-color: lighten($gray, 30%)
@@ -55,3 +89,39 @@
 .sr-success-check
   color: $green
   font-size: 60px
+
+// Selectboxes
+.sr-select
+  display: inline-block
+  position: relative
+  vertical-align: middle
+
+  &:before, &:after
+    content: ""
+    position: absolute
+
+  select
+    color: $gray
+    cursor: pointer
+    background: rgba(white,0.3)
+    border: 1px solid $light-gray
+    padding: 0 45px 0 15px
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    outline: none
+    height: 45px
+
+    &:hover
+      border-color: $gray
+
+    &:focus
+      border-color: $blue
+
+    option
+      color: $blue
+
+  &__icon
+    position: absolute
+    top: 10px
+    right: 15px

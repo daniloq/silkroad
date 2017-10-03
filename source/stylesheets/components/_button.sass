@@ -1,3 +1,4 @@
+// Buttons
 .sr-button
   height: 35px
   padding: 0 20px
@@ -11,6 +12,7 @@
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.23)
   display: inline-block
   line-height: 35px
+  transition: all .3s
 
   &[type="submit"]
     display: inline-block
@@ -23,6 +25,9 @@
 
   &--primary
     background-color: $blue
+    &:hover
+      background-color: darken($blue, 10%)
+      color: $white
 
     &-ghost
       background-color: transparent
@@ -38,12 +43,17 @@
     padding: 0
     box-shadow: none
 
+    &:hover
+      color: $blue
+
   &--with-icon
 
     .sr-button__icon
       display: inline-block
       width: 18px
       height: 18px
-      font-size: 18px
       line-height: inherit
       vertical-align: top
+
+  &--block
+    width: 100%

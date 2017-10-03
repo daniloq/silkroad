@@ -5,6 +5,7 @@
   border: 1px solid $light-gray
   justify-content: space-between
   height: 60px
+  margin-bottom: 40px
 
   &__pager
     padding: 0 20px
@@ -16,6 +17,12 @@
     padding: 0 20px
     display: flex
     align-items: center
+    color: $gray
+    transition: all .3s
+    outline: none
+    &:hover
+      color: $blue
+      background: $light-gray
 
     &--prev
       border-right: 1px solid $light-gray

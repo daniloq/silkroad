@@ -1,11 +1,17 @@
-@mixin wrapper
+.sr-wrapper
   max-width: $max-width
-  display: flex
-  align-items: center
   margin: 0 auto
-  height: inherit
-  justify-content: space-between
   padding: 0 20px
 
-.sr-search
-  border-bottom: 1px solid $light-gray
+  &--medium
+    max-width: 700px
+
+  &--small
+    max-width: 300px
+    margin: 0
+    padding: 0
+
+@media only screen and (max-width: 600px)
+  .sr-wrapper
+    &--small
+      max-width: 100%
