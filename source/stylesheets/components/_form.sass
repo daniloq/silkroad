@@ -1,19 +1,19 @@
 .sr-form
-  padding: 40px 0
+  padding: em(40) 0
 
   .sr-button
-    width: 280px
+    width: em(280)
 
   &__field
-    margin-bottom: 20px
+    margin-bottom: em(20)
 
     &--with-icon
       position: relative
 
       .material-icons
         position: absolute
-        right: 15px
-        top: 12px
+        right: em(15)
+        top: em(12)
 
     .sr-form__helper
       display: none
@@ -30,7 +30,7 @@
       .sr-form__helper
         display: block
         color: $red
-        margin: 5px 0 0 0
+        margin: em(5) 0 0 0
 
     // Disabled State
     &--disabled
@@ -49,10 +49,10 @@
 
   &__input
     border-radius: $border-radius
-    border: 1px solid $light-gray
-    height: 45px
+    border: em(1) solid $light-gray
+    height: em(45)
     outline: none
-    padding: 0 15px
+    padding: 0 em(15)
     position: relative
     width: 100%
     transition: all .3s
@@ -65,7 +65,7 @@
 
   &__label
     display: block
-    margin: 0 0 10px 0
+    margin: 0 0 em(10) 0
 
   // Placeholder color
   $placeholder-color: lighten($gray, 30%)
@@ -88,7 +88,7 @@
 
 .sr-success-check
   color: $green
-  font-size: 60px
+  font-size: em(60)
 
 // Selectboxes
 .sr-select
@@ -104,8 +104,8 @@
     color: $gray
     cursor: pointer
     background: rgba(white,0.3)
-    border: 1px solid $light-gray
-    padding: 0 45px 0 15px
+    border: em(1) solid $light-gray
+    padding: 0 em(45) 0 em(15)
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none
@@ -123,5 +123,5 @@
 
   &__icon
     position: absolute
-    top: 10px
-    right: 15px
+    top: em(10)
+    right: em(15)

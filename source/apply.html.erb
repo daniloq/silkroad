@@ -6,10 +6,10 @@ title: Silkroad - Apply
 
 <section class="sr-breadcrumb">
   <div class="sr-wrapper sr-wrapper--medium">
-    <a href="/job-detail.html" class="sr-button sr-button--with-icon sr-button--just-text">
+    <% link_to 'job-detail.html', class: "sr-button sr-button--with-icon sr-button--just-text" do %>
       <i class="material-icons sr-button__icon">chevron_left</i>
       Senior Product Designer
-    </a>
+    <% end %>
   </div>
 </section>
 
@@ -50,8 +50,8 @@ title: Silkroad - Apply
         </div>
         <div class="sr-form__field">
           <label class="sr-form__label">* Resume</label>
-          <a href=""/>Attach</a>
-          <a href=""/>Dropbox</a>
+          <%= link_to "Attach" %>
+          <%= link_to "Dropbox" %>
           <div class="sr-form__helper">
             There was a problem with your upload
           </div>
@@ -104,7 +104,7 @@ title: Silkroad - Apply
       <div class="align--center">
         <input id="modal__button" class="sr-button sr-button--large sr-button--primary" type="submit" value="Next" />
         <br/><br/>
-        <a href="">Privacy Policy</a>
+        <%= link_to "Privacy Policy" %>
       </div>
     </form>
   </div>
@@ -120,8 +120,9 @@ title: Silkroad - Apply
     <p>Nulla eleifend elit eget viverra fermentum. Donec sed purus mauris. Fusce laoreet tellus at hendrerit aliquam. Phasellus maximus dui efficitur, egestas augue sit amet, sodales risus. Pellentesque ullamcorper eu quam a molestie. Maecenas rhoncus congue purus vitae sollicitudin. Duis suscipit faucibus leo, ac semper tellus aliquam sit amet. In quis iaculis ligula. Vestibulum pulvinar eros non leo bibendum, ac tincidunt lorem varius.</p>
     <p>Vestibulum accumsan tortor a dui fermentum volutpat. Maecenas vel sagittis sem. Nunc viverra erat dolor, a euismod dui ultrices at. Proin mi ligula, efficitur tempus volutpat non, hendrerit sit amet orci. Nam sed ante vestibulum eros vehicula placerat ac id est. Maecenas eleifend ligula nibh, et luctus magna mattis ac. Integer suscipit vehicula lorem nec tincidunt. Nullam vitae bibendum risus. Proin hendrerit laoreet fermentum. Pellentesque convallis pharetra consectetur.</p>
     <br/>
-    <a class="sr-button sr-button--large sr-button--primary" href="/success.html">Accept &amp; Submit</a>
-    &nbsp; <a href="">Cancel</a>
+    <%= link_to "Accept &amp; Submit", "job-detail.html", class: "sr-button sr-button--large sr-button--primary" %>
+    &nbsp;
+    <%= link_to "Cancel" %>
   </div>
 
 </div>

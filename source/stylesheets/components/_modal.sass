@@ -2,7 +2,7 @@
   display: none
   position: fixed
   z-index: 3
-  padding-top: 100px
+  padding-top: em(100)
   left: 0
   top: 0
   width: 100%
@@ -14,14 +14,14 @@
   &__content
     background-color: $white
     margin: auto
-    padding: 20px
-    max-width: 680px
+    padding: em(20)
+    max-width: em(680)
     border-radius: $border-radius
 
   &__close
     color: #aaaaaa
     float: right
-    font-size: 28px
+    font-size: em(28)
     font-weight: bold
     &:hover, &:focus
       color: #000
@@ -33,9 +33,9 @@
     .modal__header
       display: flex
       align-items: center
-      border-bottom: 1px solid $light-gray
-      margin: -20px -20px 20px -20px
-      padding: 0 20px
+      border-bottom: em(1) solid $light-gray
+      margin: em(-20) em(-20) em(20) em(-20)
+      padding: 0 em(20)
       justify-content: space-between
 
     .modal__content
@@ -45,7 +45,7 @@
       top: 0
 
     .sr-select
-      margin:  0 0 20px 0
+      margin:  0 0 em(20) 0
       width: 100%
 
       select

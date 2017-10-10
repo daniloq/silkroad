@@ -7,12 +7,14 @@ $yellow: #F1C968
 $red: #DC6071
 $dark-gray: #3B3B3B
 $gray: #595959
-$light-gray: #EFEFEF
+$light-gray: darken(#EFEFEF, 5%)
 $white: #FFFFFF
 
 // Theme Variables
 $border-radius: 2px
 $max-width: 1280px
+$primary-color: $blue
+$secondary-color: $green
 
 // Clearfix
 @mixin clearfix
@@ -20,6 +22,12 @@ $max-width: 1280px
     content: ""
     display: table
     clear: both
+
+// PX to EM
+$browser-context: 14
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
 
 // Help Classers
 .align

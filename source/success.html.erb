@@ -6,10 +6,10 @@ title: Silkroad - Thank You
 
 <section class="sr-breadcrumb">
   <div class="sr-wrapper sr-wrapper--medium">
-    <a href="/" class="sr-button sr-button--with-icon sr-button--just-text">
+    <% link_to '/', class: "sr-button sr-button--with-icon sr-button--just-text" do %>
       <i class="material-icons sr-button__icon">chevron_left</i>
       Accenture Jobs
-    </a>
+    <% end %>
   </div>
 </section>
 
@@ -18,6 +18,6 @@ title: Silkroad - Thank You
     <i class="material-icons sr-success-check">check</i>
     <h2>Thanks for applying!</h2>
     <p>Your application has been submitted to Accenture for the Senior Product Designer position.</p>
-    <a href="/" class="sr-button sr-button--large sr-button--primary">View Other Openings</a>
+    <%= link_to "View Other Openings", "/", class: "sr-button sr-button--large sr-button--primary" %>
   </div>
 </section>

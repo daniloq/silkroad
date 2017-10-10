@@ -1,7 +1,9 @@
 <header class="sr-nav">
   <div class="sr-nav__container sr-wrapper">
     <div class="sr-logo">
-      <a href="/"><img class="sr-logo__image" src="images/logo.png"/></a>
+      <% link_to '/' do %>
+        <%= image_tag 'images/logo.png', class: "sr-logo__image" %>
+      <% end %>
     </div>
     <nav class="sr-desktop-nav">
       <%= partial "nav-links" %>

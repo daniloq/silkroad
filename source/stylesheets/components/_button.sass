@@ -1,45 +1,45 @@
 // Buttons
 .sr-button
-  height: 35px
-  padding: 0 20px
-  font-size: 12px
+  height: em(35)
+  padding: 0 em(20)
+  font-size: em(12)
   text-transform: uppercase
   color: $white
   border: none
   background: $gray
   border-radius: $border-radius
   outline: none
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,.23)
+  box-shadow: 0 em(1) em(2) 0 rgba(0,0,0,.23)
   display: inline-block
-  line-height: 35px
+  line-height: em(35)
   transition: all .3s
 
   &[type="submit"]
     display: inline-block
 
   &--large
-    height: 45px
-    padding: 0 30px
-    font-size: 16px
-    line-height: 45px
+    height: em(45)
+    padding: 0 em(30)
+    font-size: em(16)
+    line-height: em(45)
 
   &--primary
-    background-color: $blue
+    background-color: $primary-color
     &:hover
-      background-color: darken($blue, 10%)
+      background-color: darken($primary-color, 10%)
       color: $white
 
     &-ghost
       background-color: transparent
-      color: $blue
+      color: $primary-color
       box-shadow: none
-      box-shadow: inset 0 0 0 2px $blue
+      box-shadow: inset 0 0 0 em(2) $primary-color
 
   &--just-text
     background: none
     color: $gray
     text-transform: none
-    font-size: 14px
+    font-size: em(14)
     padding: 0
     box-shadow: none
 
@@ -50,8 +50,8 @@
 
     .sr-button__icon
       display: inline-block
-      width: 18px
-      height: 18px
+      width: em(18)
+      height: em(18)
       line-height: inherit
       vertical-align: top
 

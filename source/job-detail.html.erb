@@ -15,11 +15,11 @@ title: Silkroad - Job Detail
 
 <section class="sr-breadcrumb">
   <div class="sr-wrapper sr-wrapper--medium">
-    <a href="/" class="sr-button sr-button--with-icon sr-button--just-text">
+    <% link_to '/', class: "sr-button sr-button--with-icon sr-button--just-text" do %>
       <i class="material-icons sr-button__icon">chevron_left</i>
       Accenture Jobs
-    </a>
-    <a href="/apply.html" class="sr-button sr-button--primary">Apply</a>
+    <% end %>
+    <%= link_to "Apply", "/apply.html", class: "sr-button sr-button--primary" %>
   </div>
 </section>
 
@@ -53,6 +53,6 @@ title: Silkroad - Job Detail
 
 <section class="sr-job-detail__cta">
   <div class="sr-wrapper sr-wrapper--medium">
-    <a href="/apply.html" class="sr-button sr-button--large sr-button--primary">Apply</a>
+    <%= link_to "Apply", "/apply.html", class: "sr-button sr-button--large sr-button--primary" %>
   </div>
 </section>

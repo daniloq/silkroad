@@ -1,6 +1,6 @@
 .sr-nav
   background-color: $blue
-  height: 75px
+  height: em(75)
   position: relative
 
   &__container
@@ -10,18 +10,18 @@
     justify-content: space-between
 
   .sr-wrapper
-    padding: 0 20px
+    padding: 0 em(20)
 
   &__item
     color: rgba(255,255,255,0.8)
-    padding-left: 30px
+    padding-left: em(30)
     &:hover
       color: $white
 
   // Logo
   .sr-logo
-    width: 40px
-    height: 40px
+    width: em(40)
+    height: em(40)
 
 .sr-mobile-nav
   position: absolute
@@ -35,40 +35,40 @@
   .sr-nav__item
     display: block
     color: $gray
-    padding: 20px
-    border-bottom: 1px solid $light-gray
+    padding: em(20)
+    border-bottom: em(1) solid $light-gray
     &:hover
       color: $blue
 
   &__title
     color: $dark-gray
     font-weight: 700
-    padding: 0 20px
-    border-bottom: 1px solid $light-gray
-    height: 75px
-    line-height: 75px
+    padding: 0 em(20)
+    border-bottom: em(1) solid $light-gray
+    height: em(75)
+    line-height: em(75)
 
   &__button
     display: none
-    height: 17px
+    height: em(17)
     padding: 0
     transition: all 0.3s ease-in-out
     position: absolute
     z-index: 2
-    right: 20px
+    right: em(20)
     &:hover
       cursor: pointer
     &-item
       background: $white
       display: block
-      height: 3px
-      margin: 0 0 4px
+      height: em(3)
+      margin: 0 0 em(4)
       transition: all 0.3s ease-in-out
-      width: 22px
+      width: em(22)
     &.open
       z-index: 2
       .sr-mobile-nav__button-item
-        margin: 0 0 6px
+        margin: 0 0 em(6)
         background: $gray
         &:first-child
           transform: rotate(45deg)
@@ -77,7 +77,7 @@
           opacity: 0
         &:nth-child(3)
           transform: rotate(-45deg)
-          transform-origin: -4px
+          transform-origin: em(-4)
 
 @media only screen and (max-width : 600px)
   .sr-desktop-nav
