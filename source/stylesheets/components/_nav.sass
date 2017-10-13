@@ -14,9 +14,26 @@
 
   &__item
     color: rgba(255,255,255,0.8)
-    padding-left: em(30)
+    text-decoration: none
+    height: em(75)
+    display: inline-block
+    line-height: em(75)
+    border-right: em(1) solid rgba(255,255,255, 0.5)
+    padding: 0 em(30)
+    margin: 0
+    margin-left: em(-5)
+
     &:hover
       color: $white
+      background-color: darken($primary-color, 5%)
+      border-right: em(1) solid darken($primary-color, 5%)
+      border-left: em(1) solid darken($primary-color, 5%)
+
+    &:first-of-type
+      border-left: em(1) solid rgba(255,255,255, 0.5)
+
+      &:hover
+        border-left: em(1) solid darken($primary-color, 5%)
 
   // Logo
   .sr-logo
@@ -37,8 +54,11 @@
     color: $gray
     padding: em(20)
     border-bottom: em(1) solid $light-gray
+    line-height: inherit
+    height: inherit
+    text-decoration: none
     &:hover
-      color: $blue
+      color: $white
 
   &__title
     color: $dark-gray

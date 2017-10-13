@@ -27,4 +27,9 @@
     $('.sr-mobile-nav').slideToggle();
     $(this).toggleClass('open');
   });
+  $('.sr-mobile-nav__button').keypress(function(e){
+    e.preventDefault();
+    $('.sr-mobile-nav').slideToggle();
+    $(this).toggleClass('open');
+  });
 </script>

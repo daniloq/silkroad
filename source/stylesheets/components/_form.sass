@@ -7,13 +7,16 @@
   &__field
     margin-bottom: em(20)
 
+    input + label
+      margin: 0 0 0 em(10)
+
     &--with-icon
       position: relative
 
       .material-icons
         position: absolute
-        right: em(15)
-        top: em(12)
+        right: 15px
+        top: 10px
 
     .sr-form__helper
       display: none
@@ -52,7 +55,7 @@
     border: em(1) solid $light-gray
     height: em(45)
     outline: none
-    padding: 0 em(15)
+    padding: 0 em(10)
     position: relative
     width: 100%
     transition: all .3s
@@ -105,7 +108,7 @@
     cursor: pointer
     background: rgba(white,0.3)
     border: em(1) solid $light-gray
-    padding: 0 em(45) 0 em(15)
+    padding: 0 em(45) 0 em(10)
     -webkit-appearance: none
     -moz-appearance: none
     appearance: none

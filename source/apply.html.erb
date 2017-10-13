@@ -21,35 +21,35 @@ title: Silkroad - Apply
     <form class="sr-form">
       <div class="sr-wrapper sr-wrapper--small">
         <div class="sr-form__field sr-form__field--error">
-          <label class="sr-form__label">* First Name</label>
-          <input class="sr-form__input" type="text" />
+          <label class="sr-form__label" for="firstname">* First Name</label>
+          <input id="firstname" class="sr-form__input" type="text" />
           <div class="sr-form__helper">
             Please type your first name
           </div>
         </div>
         <div class="sr-form__field">
-          <label class="sr-form__label">* Last Name</label>
-          <input class="sr-form__input" type="text" />
+          <label class="sr-form__label" for="lastname">* Last Name</label>
+          <input id="lastname" class="sr-form__input" type="text" />
           <div class="sr-form__helper">
             Please type your last name
           </div>
         </div>
         <div class="sr-form__field">
-          <label class="sr-form__label">* Email Address</label>
-          <input class="sr-form__input" type="email" />
+          <label class="sr-form__label" for="email">* Email Address</label>
+          <input id="email" class="sr-form__input" type="email" />
           <div class="sr-form__helper">
             Please type your email addresss
           </div>
         </div>
         <div class="sr-form__field sr-form__field--disabled">
-          <label class="sr-form__label">Phone</label>
-          <input class="sr-form__input" type="phone" disabled/>
+          <label class="sr-form__label" for="phone">Phone</label>
+          <input id="phone" class="sr-form__input" type="tek" disabled />
           <div class="sr-form__helper">
             Phone number invalid
           </div>
         </div>
         <div class="sr-form__field">
-          <label class="sr-form__label">* Resume</label>
+          <div class="sr-form__label">* Resume</div>
           <%= link_to "Attach" %>
           <%= link_to "Dropbox" %>
           <div class="sr-form__helper">
@@ -57,15 +57,15 @@ title: Silkroad - Apply
           </div>
         </div>
       </div>
-      <br/>
+      <br>
       <h3>U.S. Equal Employment Opportunity Information</h3>
       <p>Nulla eleifend elit eget viverra fermentum. Donec sed purus mauris. Fusce laoreet tellus at hendrerit aliquam. Phasellus maximus dui efficitur, egestas augue sit amet, sodales risus. Pellentesque ullamcorper eu quam a molestie. Maecenas rhoncus congue purus vitae sollicitudin. Duis suscipit faucibus leo, ac semper tellus aliquam sit amet. In quis iaculis ligula. Vestibulum pulvinar eros non leo bibendum, ac tincidunt lorem varius.</p>
       <p>Vestibulum accumsan tortor a dui fermentum volutpat. Maecenas vel sagittis sem. Nunc viverra erat dolor, a euismod dui ultrices at. Proin mi ligula, efficitur tempus volutpat non, hendrerit sit amet orci. Nam sed ante vestibulum eros vehicula placerat ac id est. Maecenas eleifend ligula nibh, et luctus magna mattis ac. Integer suscipit vehicula lorem nec tincidunt. Nullam vitae bibendum risus. Proin hendrerit laoreet fermentum. Pellentesque convallis pharetra consectetur.</p>
       <div class="sr-wrapper sr-wrapper--small">
         <div class="sr-form__field">
-          <label class="sr-form__label">Gender</label>
+          <label class="sr-form__label" for="gender">Gender</label>
           <div class="sr-select">
-            <select>
+            <select id="gender">
               <option value="Option 1">Option 1</option>
               <option value="Option 2">Option 2</option>
             </select>
@@ -73,9 +73,9 @@ title: Silkroad - Apply
           </div>
         </div>
         <div class="sr-form__field">
-          <label class="sr-form__label">Race</label>
+          <label class="sr-form__label" for="race">Race</label>
           <div class="sr-select">
-            <select>
+            <select id="race">
               <option value="Option 1">Option 1</option>
               <option value="Option 2">Option 2</option>
             </select>
@@ -83,19 +83,19 @@ title: Silkroad - Apply
           </div>
         </div>
         <div class="sr-form__field">
-          <label class="sr-form__label">* Are you authorized to work in the United States?</label>
-          <input name="radio1" type="radio" /> Yes
-          <br/>
-          <input name="radio1" type="radio" /> No
+          <div class="sr-form__label">* Are you authorized to work in the United States?</div>
+          <input id="r1" name="radio1" type="radio" /><label for="r1">Yes</label>
+          <br>
+          <input id="r2" name="radio1" type="radio" /><label for="r2">No</label>
           <div class="sr-form__helper">
             Please select one
           </div>
         </div>
         <div class="sr-form__field">
-          <label class="sr-form__label">Signup for open resume submission?</label>
-          <input name="radio2" type="radio" /> Yes
-          <br/>
-          <input name="radio2" type="radio" /> No
+          <div class="sr-form__label">Signup for open resume submission?</div>
+          <input id="r3" name="radio2" type="radio" /><label for="r3">Yes</label>
+          <br>
+          <input id="r4" name="radio2" type="radio" /><label for="r4">No</label>
           <div class="sr-form__helper">
             Please select one
           </div>
@@ -103,7 +103,7 @@ title: Silkroad - Apply
       </div>
       <div class="align--center">
         <input id="modal__button" class="sr-button sr-button--large sr-button--primary" type="submit" value="Next" />
-        <br/><br/>
+        <br><br>
         <%= link_to "Privacy Policy" %>
       </div>
     </form>
@@ -119,7 +119,7 @@ title: Silkroad - Apply
     <h3>Safe Harbor Enforcement</h3>
     <p>Nulla eleifend elit eget viverra fermentum. Donec sed purus mauris. Fusce laoreet tellus at hendrerit aliquam. Phasellus maximus dui efficitur, egestas augue sit amet, sodales risus. Pellentesque ullamcorper eu quam a molestie. Maecenas rhoncus congue purus vitae sollicitudin. Duis suscipit faucibus leo, ac semper tellus aliquam sit amet. In quis iaculis ligula. Vestibulum pulvinar eros non leo bibendum, ac tincidunt lorem varius.</p>
     <p>Vestibulum accumsan tortor a dui fermentum volutpat. Maecenas vel sagittis sem. Nunc viverra erat dolor, a euismod dui ultrices at. Proin mi ligula, efficitur tempus volutpat non, hendrerit sit amet orci. Nam sed ante vestibulum eros vehicula placerat ac id est. Maecenas eleifend ligula nibh, et luctus magna mattis ac. Integer suscipit vehicula lorem nec tincidunt. Nullam vitae bibendum risus. Proin hendrerit laoreet fermentum. Pellentesque convallis pharetra consectetur.</p>
-    <br/>
+    <br>
     <%= link_to "Accept &amp; Submit", "job-detail.html", class: "sr-button sr-button--large sr-button--primary" %>
     &nbsp;
     <%= link_to "Cancel" %>
@@ -142,9 +142,18 @@ title: Silkroad - Apply
     modal.style.display = "block";
     return false;
   }
+  btn.keypress = function() {
+    modal.style.display = "block";
+    return false;
+  }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
+    modal.style.display = "none";
+    return false;
+  }
+
+  span.keypress = function() {
     modal.style.display = "none";
     return false;
   }

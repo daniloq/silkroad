@@ -117,25 +117,25 @@ title: Silkroad
       <h5>Filters</h5>
       <span class="modal__close"><i class="material-icons">close</i></span>
     </div>
-    <label class="sr-form__label">Countries</label>
+    <label class="sr-form__label" for="countries">Countries</label>
     <div class="sr-select">
-      <select>
+      <select id="countries">
         <option value="Option 1">Option 1</option>
         <option value="Option 2">Option 2</option>
       </select>
       <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
     </div>
-    <label class="sr-form__label">Cities</label>
+    <label class="sr-form__label" for="cities">Cities</label>
     <div class="sr-select">
-      <select>
+      <select id="cities">
         <option value="Option 1">Option 1</option>
         <option value="Option 2">Option 2</option>
       </select>
       <span class="sr-select__icon"><i class="material-icons">arrow_drop_down</i></span>
     </div>
-    <label class="sr-form__label">Departments</label>
+    <label class="sr-form__label" for="departments">Departments</label>
     <div class="sr-select">
-      <select>
+      <select id="departments">
         <option value="Option 1">Option 1</option>
         <option value="Option 2">Option 2</option>
       </select>
@@ -164,9 +164,15 @@ title: Silkroad
   btn.onclick = function() {
     modal.style.display = "block";
   }
+  btn.keypress = function() {
+    modal.style.display = "block";
+  }
 
   // When the user clicks on <span> (x), close the modal
   span.onclick = function() {
+    modal.style.display = "none";
+  }
+  span.keypress = function() {
     modal.style.display = "none";
   }
 
